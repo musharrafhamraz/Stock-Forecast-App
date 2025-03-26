@@ -1,0 +1,33 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    TextInput:
+        id: stock_input
+        hint_text: "Enter stock symbols (e.g., AAPL or JPM BAC)"
+        multiline: False
+
+    Spinner:
+        id: model_spinner
+        text: "Select Model"
+        values: ("ADF", "ARIMA", "LSTM", "SARIMA", "VECM")
+
+    Spinner:
+        id: history_spinner
+        text: "Select Years of Data"
+        values: ("5", "10", "15", "20")
+
+    Spinner:
+        id: prediction_spinner
+        text: "Select Prediction Horizon"
+        values: ("1", "3", "6", "12")
+
+    Button:
+        text: "Run Forecast"
+        size_hint: 1, 0.2
+        on_press: app.run_forecast()
+
+    Label:
+        id: output_label
+        text: "Results will appear here"
