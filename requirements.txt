@@ -1,0 +1,11 @@
+kivy
+pandas
+numpy
+matplotlib
+plotly
+statsmodels
+scikit-learn
+tensorflow
+yfinance
+requests
+python-dotenv
